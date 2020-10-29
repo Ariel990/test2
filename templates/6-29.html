@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .item{
+            padding:20px;
+            position: relative;
+        }
+        .item span{
+            position: absolute;
+            top: 49px;
+            left: 71px;
+            opacity: 1;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <form id="f1">
+        <input type="text"/>
+        <input type="submit" value="提交"/>
+        <a onclick="Submit()">提交</a>
+    </form>
+    <div id="status" style="color: red"></div>
+    <input type="submit" onclick="DeleteStatus();" value="删除">
+
+    <div class="item">
+        <a onclick="Favor(this);">赞1</a>
+    </div><div class="item">
+        <a onclick="Favor(this);">赞2</a>
+    </div><div class="item">
+        <a onclick="Favor(this);">赞3</a>
+    </div><div class="item">
+        <a onclick="Favor(this);">赞4</a>
+    </div>
+    <script>
+        var ret = confirm('是否删除?')
+        console.log(ret);
+
+        function Submit() {
+            var form =document.getElementById('f1');
+            form.submit();
+        }
+        function DeleteStatus() {
+            var s = document.getElementById('status');
+            s.innerText = '删除成功';
+            setTimeout(function () {
+                s.innerText = '';
+            },2000)
+        }
+        function Favor(ths) {
+            var top = 49;
+            var left = 71;
+            var op = 1;
+            var fontSize = 18;
+
+            var tag = document.createElement('span');
+            tag.innerText = '+1';
+            tag.style.position = 'absolute';
+            tag.style.top = top + 'px';
+            tag.style.left = left + 'px';
+            tag.style.opacity = op;
+            tag.style.fontSize = fontSize +'px';
+            ths.parentElement.appendChild(tag);
+
+            var interval = setInterval(function () {
+                top -= 10;
+                left += 10;
+                fontSize += 5;
+                op -= 0.1;
+
+                tag.style.top = top + 'px';
+                tag.style.left = left + 'px';
+                tag.style.opacity = op;
+                tag.style.fontSize = fontSize +'px';
+                if(op <= 0.2){
+                    clearInterval(interval);
+                    ths.parentElement.removeChild(tag);
+                }
+            },30);
+        }
+    </script>
+</body>
+</html>

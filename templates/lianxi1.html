@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none!important;
+        }
+        .shade{
+            position: fixed;
+            top:0px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.6);
+            z-index: 1000;
+        }
+        .model{
+            height: 200px;
+            width: 400px;
+            background-color: white;
+            position: fixed;
+            top:50%;
+            left: 50%;
+            margin-left: -200px;
+            margin-top: -100px;
+            z-index: 1001;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="height: 2000px;background-color: #dddddd">
+        <input type="button" value="点我" onclick="ShowModal();"/>
+    </div>
+
+    <div id="shade" class="shade hide"></div>
+    <div id="model" class="model hide"></div>
+
+    <div class="c1 c2 c3">123</div>
+    <div class="c1 ">123</div>
+
+    <input id="i3" type="text" value="请输入关健字" onfocus="Fous()"onblur="Blur()"/> <br/>
+    <input type="text" id="i1"/>
+    <a id="i2" href="http://www.baidu.com">百<span>6566</span>度</a>
+
+<script >
+    function ShowModel() {
+        var t1 = document.getElementById('shade');
+        var t2 = document.getElementById('model');
+
+        t1.classList.remove('hide');
+        t2.classList.remove('hide');
+    }
+    /*
+    function Fous() {
+         var tag = document.getElementById('i3');
+         if(tag.value=='请输入关健字')
+        tag.value = '';
+
+    }
+    function Blur() {
+        var tag = document.getElementById('i3');
+        var val = tag.value;
+        if(val.trim().length==0){
+            tag.value = '请输入关健字';
+        }
+    }
+     */
+</script>
+</body>
+</html>

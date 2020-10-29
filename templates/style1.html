@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/s1.css"/>
+    <style>
+        div{
+            {#background-color: plum;#}
+            color: black;
+        }
+        #i1{
+            background-color: cadetblue;
+            color: black;
+            font-size: 30px;
+        }
+        .c1{
+            background-color: darkgoldenrod;
+            color: darkred;
+            border: blue;solid-color: chartreuse;
+        }
+        .c1 div p .c3{
+            background-color: burlywood;
+            font-size: 40px;
+        }
+        .c4,.c5,.c6{
+            font-size: 30px;
+            color:coral;
+        }
+        .c7{
+            background-color: darkgoldenrod;
+            color: blue;
+            font-size: 50px;
+            height: 100px;
+            width: 100%;
+        }
+        .img{
+            background-image: url("../static/css/623.jpg");
+            height: 300px;
+            width: 300px;
+            background-repeat: no-repeat;
+            background-position: -110px -35px;
+        }
+        .left{
+            float: left;
+        }
+        .item{
+            background-color: darkorange;
+        }
+        .item:after{
+            content: '.';
+            clear: both;
+            display: block;
+            visibility: hidden;
+            height: 0;
+        }
+
+        .icon{
+            display: inline-block;
+            border-top:15px solid red;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid transparent;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="icon"></div> <br/>
+
+    <div class="c10">ddd</div>
+    <div class="c10">fff</div>
+
+    <div style="background-color: red" class="item">
+        <div class="left" style="height: 80px;background-color: aqua">111</div>
+        <div class="left">222</div>
+    </div>
+
+    <div style="height: 500px;width: 400px;border: 1px solid red;position: relative">
+        <div style="height: 200px;background-color: red;">
+            <div style="position: absolute;bottom: 0;right: 0;">000</div>
+        </div>
+    </div>
+    <div style="height: 1000px;background-color: green;"></div>
+    <div style="position: fixed;right: 20px;bottom: 10px">返回顶部</div>
+
+    <div style="height: 100px;background-color: #ddd;border: 1px solid red;">
+        <div style="margin-top: 30px;margin-left: 100px">
+            <input/>
+            <input/>
+            <input/>
+        </div>
+    </div>
+
+    <div style="height:70px;border:1px solid red;">
+        <div style="height: 30px;background-color: green"></div>
+    </div>
+
+    <div class="c11">稻花香里说丰年，听取蛙声一片。</div>
+    <div style="width: 500px;border: 1px solid red;">
+        <div style="width: 30% ;background-color: chartreuse;float: left">清风半夜鸣蝉</div>
+        <div style="width:30%; background-color:crimson;float: right">清风半夜鸣蝉</div>
+        <div style="width:40%; background-color:crimson;float: right">清风半夜鸣蝉</div>
+        <div style="clear:both"></div>
+    </div><br/>
+
+    <div class="img">静夜思</div>
+
+    <div class="c4">低头思故乡</div>
+    <div class="c5">低头思故乡</div>
+    <div class="c6">低头思故乡</div>
+
+    <div class="c1">
+        <div>
+            <p>
+                <span>举头望明月</span><br/>
+                <a class="c3">举头望明月</a>
+            </p>
+        </div>
+    </div>
+
+    <span class="c1">疑是地上霜</span> <br/>
+    <a class="c1">疑是地上霜</a> <br/>
+    <div class="c1">疑是地上霜</div>
+
+    <a id="i1">床前明月光</a>
+    <div>99</div>
+    <div  style="background-color: darkgray;color: crimson">99</div>
+    <div>99</div>
+
+</body>
+</html>
